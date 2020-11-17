@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#ffffff"
     android:padding="24dp"
     tools:context=".MainActivity">
 
@@ -33,22 +34,32 @@
         android:id="@+id/txJenis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jenis Hewan"
-        android:textColor="@color/design_default_color_primary_dark"
-        android:textSize="17sp"
+        android:textColor="#ffffff"
         />
+
+    <TextView
+        android:id="@+id/txRas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ras Hewan"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="25sp" />
+
     <TextView
         android:id="@+id/txAsal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="italic"
+        android:textColor="#000000"
         android:text="Asal" />
+
     <TextView
         android:id="@+id/txDeskripsi"
         android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="#000000"
         android:text="Deskripsi hewan" />
 
     <LinearLayout
