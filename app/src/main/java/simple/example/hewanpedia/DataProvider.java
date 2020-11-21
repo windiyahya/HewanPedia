@@ -6,28 +6,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 import simple.example.hewanpedia.model.Anjing;
-import simple.example.hewanpedia.model.Beruang;
 import simple.example.hewanpedia.model.Hewan;
 import simple.example.hewanpedia.model.Kucing;
+import simple.example.hewanpedia.model.Sapi;
 
 public class DataProvider {
     private static List<Hewan> hewans = new ArrayList<>();
 
-    private static List<Beruang> intDataBeruang(Context ctx) {
-        List<Beruang> beruangs = new  ArrayList<>();
-        beruangs.add(new Beruang("BERUANG HITAM AMERIKA", "AMERIKA UTARA",
-                "Beruang hitam amerika adalah omnivora. Makanan mereka lebih banyak terdiri dari tumbuhan, tapi mereka juga makan ikan dan dan serangga. Mereka tidak terancam punah, tapi perburuan liar berpotensi menggerus populasi mereka.",
-                R.drawable.beruang_hitam_amerika));
-        beruangs.add(new Beruang("BERUANG COKLAT","AMERIKA UTARA",
-                " Seperti beruang hitam, beruang coklat juga umum terdapat di kawasan Amerika Utara. Dan seperti beruang hitam amerika pula, beruang coklat pun memiliki warna bulu yang bervariasi. Mulai dari coklat kehitaman, coklat muda, hingga pirang.",
-                R.drawable.beruang_coklat));
-        beruangs.add(new Beruang("BERUANG KUTUP","KUTUP UTARA",
-                " Beruang kutub adalah spesies terbesar dari antara semua beruang. Dengan panjang mencapai 3 meter dan berat sampai 800 kg, beruang kutub layak dinobatkan sebagai predator darat terbesar di dunia.",
-                R.drawable.beruang_kutup));
-        beruangs.add(new Beruang("BERUANG HITAM ASIA","AMERIKA",
-                "Beruang hitam asia mirip dengan beruang hitam amerika, tapi mereka punya beberapa perbedaan. Misalnya, beruang hitam asia punya corak berwarna coklat yang khas di dada mereka, sesuatu yang gak dimiliki beruang hitam amerika. ",
-                R.drawable.beruang_hitam_asia));
-        return beruangs;
+    private static List<Sapi> intDataSapi(Context ctx) {
+        List<Sapi> sapis = new  ArrayList<>();
+        sapis.add(new Sapi("Sapi Barahman", "india ",
+                "Brahman merupakan sapi yang berasal dari India, termasuk dalam Bos indicus, yang kemudian diekspor ke seluruh dunia. Jenis yang utama adalah Kankrej (Guzerat), Nelore, Gir,dan Ongole. ",
+                R.drawable.sapibrahman));
+        sapis.add(new Sapi("Sapi Ongole","India",
+                " Sapi Ongole berasal dari India, tepatnya di kabupaten Guntur, propinsi Andra Pradesh. Sapi ini menyebar keseluruh dunia termasuk Indonesia.",
+                R.drawable.sapiongole));
+        sapis.add(new Sapi("sapi Hereford","Inggris",
+                "Sapi ini turunan dari sapi Eropa yang dikembangkan di Inggris, berat jantan rata-rata 900 kg dan berat betina 725 kg. Bulunya berwarna merah, kecuali bagian muka, dada, perut bawah dan ekor berwarna putih.",
+                R.drawable.sapihereford));
+
+        return sapis;
     }
 
     private static List<Anjing> initDataAnjing(Context ctx) {
@@ -67,7 +65,7 @@ public class DataProvider {
     private static void initAllHewans(Context ctx) {
         hewans.addAll(initDataKucing(ctx));
         hewans.addAll(initDataAnjing(ctx));
-        hewans.addAll(intDataBeruang(ctx));
+        hewans.addAll(intDataSapi(ctx));
     }
 
     public static List<Hewan> getAllHewan(Context ctx) {
